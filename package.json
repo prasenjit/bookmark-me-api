@@ -5,10 +5,16 @@
   "repository": "https://github.com/prasenjit/bookmark-me-api.git",
   "author": "Prasenjit Kumar Shaw <shawprasenjit07@gmail.com>",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon index.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.16",
+    "mongoose-type-url": "^2.1.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
     "uuid": "^8.3.1"

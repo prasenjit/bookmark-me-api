@@ -5,6 +5,9 @@ import cors from 'cors';
 
 import './config/mongo.js';
 
+import bookmarkRouter from './router/bookmark.js';
+import tagRouter from './router/tag.js';
+
 const port = 5000;
 
 const app = express();
@@ -15,6 +18,9 @@ app.set('port', port);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use('/bookmarks', bookmarkRouter);
+app.use('/tags', tagRouter);
 
 app.use('*', (req, res) => {
   return res.status(404).json({
