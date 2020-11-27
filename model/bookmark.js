@@ -33,11 +33,12 @@ const bookmarkSchema = new mongoose.Schema(
     },
     tags: {
       type: String,
-    }
+    },
+    createdAt: Number,
+    updatedAt: Number,
   },
   {
     timestamps: { currentTime: () => Math.floor(Date.now() / 1000) },
-    collection: 'bookmarks',
   }
 );
 

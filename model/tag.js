@@ -18,10 +18,11 @@ const tagSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    createdAt: Number,
+    updatedAt: Number,
   },
   {
     timestamps: { currentTime: () => Math.floor(Date.now() / 1000) },
-    collection: 'tags',
   }
 );
 
@@ -46,6 +47,7 @@ tagSchema.statics.getTag = async function (id) {
 tagSchema.statics.createTag = async function (title) {
   try {
     const tag = await this.create({ title });
+    return tag;
   } catch (error) {
     throw error;
   }
