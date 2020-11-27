@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e9934d5c-e16a-44da-9c26-13141d017691",
+		"_postman_id": "4c86772f-f000-49f0-a12e-8cbddccdb6c6",
 		"name": "Bookmark-Me",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -58,10 +58,28 @@
 				{
 					"name": "Update Tags",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tags\": \"0ad4acb126d0430d907dcd1b12d2d242\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:5000/bookmarks/8966e7bde4444173a0c0a28c9d00d7e8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"bookmarks",
+								"8966e7bde4444173a0c0a28c9d00d7e8"
+							]
 						}
 					},
 					"response": []
