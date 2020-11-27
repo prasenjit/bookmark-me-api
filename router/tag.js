@@ -5,6 +5,7 @@ const router = Router();
 
 router
   .get('/', TagController.getTags)
-  .post('/', TagController.createTag);
+  .post('/', TagController.createTag)
+  .get('/:id', TagController.getTag);
 
 export default router;

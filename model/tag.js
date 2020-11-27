@@ -34,6 +34,15 @@ tagSchema.statics.getTags = async function () {
   }
 }
 
+tagSchema.statics.getTag = async function (id) {
+  try {
+    const tags = await this.findById(id);
+    return tags;
+  } catch (error) {
+    throw error;
+  }
+}
+
 tagSchema.statics.createTag = async function (title) {
   try {
     const tag = await this.create({ title });

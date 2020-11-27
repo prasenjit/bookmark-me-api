@@ -32,7 +32,7 @@ const bookmarkSchema = new mongoose.Schema(
       type: String,
     },
     tags: {
-      type: [TagModel.schema],
+      type: String,
     }
   },
   {
